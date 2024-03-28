@@ -1,9 +1,13 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-    const [theme, setTheme] = useState("white");
+    const prevTheme = localStorage.getItem("theme");
+    const [theme, setTheme] = useState(prevTheme);
+    useEffect(()=>{
+        localStorage.setItem("theme",theme);
+    },[theme])
     const changeThemefun = () => {setTheme((theme) => (theme === "white" ? "dark" : "white"))}
     return (
         <ThemeContext.Provider

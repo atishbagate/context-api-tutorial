@@ -1,0 +1,11 @@
+.dark {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    padding: 15;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

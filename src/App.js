@@ -1,18 +1,14 @@
 import './App.css';
-import { ThemeContextProvider } from './context/ThemContext';
-import ChangeThemeBtn from './components/ChangeThemeBtn';
-import Main from './components/Main';
-import { LangContextProvider } from './context/LanContext';
-import LanChange from './components/LanChange';
+import { ThemeContextProvider } from './context/ThemContext'; 
+import { LangContextProvider } from './context/LanContext'; 
+import Container from './components/Container';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <LangContextProvider>
         <ThemeContextProvider>
-          <ChangeThemeBtn />
-          <Main />
-          <LanChange />
+        <Container />
         </ThemeContextProvider>
       </LangContextProvider>
     </div>
