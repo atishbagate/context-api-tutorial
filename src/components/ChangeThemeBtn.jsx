@@ -3,13 +3,13 @@ import ThemeContext from "../context/ThemContext"
 import Test from './Test';
 
 export default function ChangeThemeBtn() {
-    const data = useContext(ThemeContext);
+    const {theme,changeThemefun} = useContext(ThemeContext);
 
-    console.log("data", data);
+    // console.log("data", data);
     return (
         <div>
-            <h2>data : {data}</h2>
-            <button>Change</button> 
+            <h2>data :  {theme}</h2>
+            <button onClick={changeThemefun}>Change</button> 
         </div>
     )
 }
