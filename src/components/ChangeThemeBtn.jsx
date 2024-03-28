@@ -8,8 +8,8 @@ export default function ChangeThemeBtn() {
     console.log("data", data);
     return (
         <div>
-            <button>Change</button>
-            <Test/>
+            <h2>data : {data}</h2>
+            <button>Change</button> 
         </div>
     )
 }

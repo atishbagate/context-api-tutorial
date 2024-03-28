@@ -1,13 +1,13 @@
 import './App.css';
-import ThemeContext from './context/ThemContext';
+import  { ThemeContextProvider } from './context/ThemContext';
 import ChangeThemeBtn from './components/ChangeThemeBtn';
 
 function App() {
   return (
     <div className="App">
-      <ThemeContext.Provider value="white">
+      <ThemeContextProvider>
         <ChangeThemeBtn />
-      </ThemeContext.Provider>
+      </ThemeContextProvider> 
     </div>
   );
 }
