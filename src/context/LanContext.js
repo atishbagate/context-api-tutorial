@@ -1,12 +1,10 @@
 import { createContext, useState } from "react"; 
+import useLanHook from "./useLanHook";
 
 const LanContext = createContext();
 
 export const LangContextProvider = ({children}) => {
-    const [lan,setLan] = useState("en");
-
-    const changeLan = () => {setLan((lan) => lan === "en" ? "hin" :"en")}
-
+    const {lan,changeLan} = useLanHook();
     return (
         <LanContext.Provider 
         value={{lan,changeLan}}

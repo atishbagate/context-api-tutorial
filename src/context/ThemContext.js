@@ -1,15 +1,14 @@
 import { createContext, useEffect, useState } from "react";
+import useTheme from "./useThemeHook";
 
 const ThemeContext = createContext();
 
-export const ThemeContextProvider = ({ children }) => {
-    const prevTheme = localStorage.getItem("theme");
-    const [theme, setTheme] = useState(prevTheme);
+export const ThemeContextProvider = ({ children }) => { 
+    const {theme,setTheme,changeThemefun} = useTheme();
     useEffect(()=>{
         localStorage.setItem("theme",theme);
     },[theme])
-    const changeThemefun = () => {setTheme((theme) => (theme === "white" ? "dark" : "white"))}
-    return (
+      return (
         <ThemeContext.Provider
             value={{ theme, setTheme,changeThemefun }}
         >
