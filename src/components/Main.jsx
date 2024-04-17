@@ -6,7 +6,8 @@ const Main = () => {
   return (
     <div>
       <hr/>
-      Theme : {theme}
+      Theme : {theme} 
+      <br/>
       <button onClick={changeThemefun}>Change</button> 
     </div>
   )
