@@ -8,8 +8,8 @@ const Main = () => {
   return (
     <div>
       <hr />
-      <p>Theme : {theme}</p>
-      <p>Language : {lan}</p>
+      <p>Theme color : {theme}</p>
+      <p>Language  : {lan}</p>
       <button onClick={changeThemefun}>Change</button>
     </div>
   )
